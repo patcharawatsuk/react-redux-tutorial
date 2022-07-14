@@ -19,4 +19,9 @@ export const products = [
     title: 'Watch',
     price: 12000,
   },
+  {
+    id: '5',
+    title: 'Macbook Air M2',
+    price: 42000
+  }
 ]
