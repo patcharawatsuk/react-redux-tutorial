@@ -10,7 +10,7 @@ export const setAuth = (user) => {
     }
 }
 
-//สร้าง function ที่ return thunk function
+//สร้าง action ที่ return thunk function
 export function fetchAuthAsync(email, password) {
     return async function(dispatch, getState) {
         //ทำ logic เกี่ยวกับ connect API
