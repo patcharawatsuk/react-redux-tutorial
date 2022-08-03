@@ -2,9 +2,15 @@ import React from 'react'
 import {useDispatch} from 'react-redux'
 
 import {addToCart} from '../store/slices/cartSlice'
+import { useAppDispatch } from '../store/store'
+import { Product } from '../types'
 
-export default function Item({product}) {
-  const dispatch = useDispatch()
+interface Props {
+  product: Product
+}
+
+export default function Item({product}: Props) {
+  const dispatch = useAppDispatch()
 
   return (
     <div className='product' >

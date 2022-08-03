@@ -2,9 +2,10 @@ import React from 'react'
 import {useSelector, useDispatch} from 'react-redux'
 
 import {deleteCart} from '../store/slices/cartSlice'
+import { useAppSelector } from '../store/store'
 
 export default function Cart() {
-  const cart = useSelector(state => state.cart)
+  const cart = useAppSelector(state => state.cart)
   const dispatch = useDispatch()
 
   return <div className='cart'>

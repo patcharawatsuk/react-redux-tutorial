@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom'
 import {useSelector, useDispatch} from 'react-redux'
 
 import {signout} from '../store/slices/authSlice'
+import { useAppDispatch, useAppSelector } from '../store/store'
 
 export default function Nav() {
-  const cart = useSelector(state => state.cart)
-  const {user} = useSelector(state => state.auth)
+  const cart = useAppSelector(state => state.cart)
+  const {user} = useAppSelector(state => state.auth)
 
   const dispatch = useDispatch()
 

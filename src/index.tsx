@@ -5,18 +5,23 @@ import { Provider } from 'react-redux'
 
 import './index.css'
 import App from './App'
-import store from './store/store'
+import {store} from './store/store'
 import reportWebVitals from './reportWebVitals'
 // { cart: [] }
-
-ReactDOM.render(
+const Index = () => {
+    return (
     <React.StrictMode>
         <Provider store={store}>
-            <BrowserRouter>
-                <App />{' '}
-            </BrowserRouter>
+                <BrowserRouter>
+                    <App />{' '}
+                </BrowserRouter>
         </Provider>
-    </React.StrictMode>,
+    </React.StrictMode>
+    );
+}
+ReactDOM.render(
+    <Index />
+    ,
     document.getElementById('root')
 )
 

@@ -8,6 +8,7 @@ import Signin from './pages/SIgnin'
 import Cart from './pages/Cart'
 
 import './App.css'
+import { useAppSelector } from './store/store'
 
 function UnAuthApp() {
     return (
@@ -36,7 +37,7 @@ function AuthApp() {
 }
 
 function App() {
-    const { user } = useSelector((state) => state.auth)
+    const { user } = useAppSelector((state) => state.auth)
 
     const history = useHistory()
 
